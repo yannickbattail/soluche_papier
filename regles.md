@@ -70,8 +70,11 @@ Le dec items contient :
 - 2 verres spéciaux
 Un total de 34 cartes (encore un multiple de 7!)
 
-Note : il n'y a pas d'éco cup, puisque c'est 
-le verre de base que tout le monde à au départ.
+Note : il n'y a pas d'éco cup, puisque c'est le verre de base que tout le monde à au départ.
+
+### design des cartes
+
+[Les cartes](cartes.html)
 
 #### note sur les arrondis des nombres à virgule
 
@@ -97,6 +100,8 @@ Il aura 4 parties:
 ### Création des persos
 
 Chaque joueur doit passer le test du crie fort. Une fois fini il doit avoir 2 notes sur 14 en sesque et en boisson.
+
+[le test du crie fort](Test_du_crie_fort.md)
 
 Attention, ces calculs doivent être fait par le personne de gauche. Le joueur **NE DOIT PAS** connaître les caractéristiques de son perso.
 
