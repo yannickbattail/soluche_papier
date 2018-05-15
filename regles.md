@@ -108,7 +108,7 @@ Attention, ces calculs doivent être fait par le personne de gauche. Le joueur *
 Son taux optimum d'alcool sera égale à note au crieFort en boisson divisée par 2 plus 5
 
     ex:  note au crieFort en boisson : 4
-    taux optimum = 4 / 2 + 5 = 8
+    taux optimum = 4 / 2 + 5 = 7
 
 Son taux max d'alcool sera eagle à son taux optimum d'alcool multiplié par 1,5
 
