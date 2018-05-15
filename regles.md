@@ -395,7 +395,7 @@ si taux de boisson est supérieur au taux optimal, tu bandes mou ou tu fais l'é
 
 la meme règle s'applique au joueur ciblé (sauf si c'est un PNJ)
 
-si le personnage à une capote, il l'enlève de son inventaire (oui 2 filles ensemble utilisent des capotes)
+si le personnage à une carte capote en main, il la défausse. (oui 2 filles ensemble utilisent des capotes)
 
 si il n'en a pas on lance un dé7, si le résultat est inférieur ou égale à 3, le personage reçoit l'insigne du crabe (MST) : malus de -5 en choppe
 
