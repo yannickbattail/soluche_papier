@@ -1,8 +1,8 @@
 Test du crie fort
 =================
 
-Question sèsque:
-----------------
+Question glouglou:
+------------------
 
 1. Avez-vous déjà été ivre ? + 1 points #
 2. Avez-vous déjà fait des concours de secs ? (celui qui bois le plus vite son verre) + 1 points
@@ -17,8 +17,8 @@ Question sèsque:
 
 Votre nombre de points: __/14
 
-Question glouglou:
-------------------
+Question sèsque:
+----------------
 
 1. Avez-vous déjà eu des relations sexuelles ? + 1 points
 2. Avez-vous déjà été impliqué(e) dans une fellation ou un cunnilingus ? + 1 points
