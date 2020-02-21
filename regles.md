@@ -8,7 +8,7 @@ Idée: l'effet de l'alcool est retardé et où tu ne connais pas trop les quanti
 
 La réussite de tes actions dépend des effets de l'alcool. Plus tu as bu plus tu réussiras, jusqu’à une limite optimum, après cette limite tes actions auront des comportement plutôt aléatoire. Au delà d'une limite max ca sera la PLS (ca se traduit par le fait que le joueur doive passer ses tours jusqu'à ce que sont taux redescende en dessous du max).
 
-### un dé7
+### Un dé7
 
 - je sais plus si je t'ai dit? soluche papier se joue avec un dé7
 - lol! un dé6litre ?
@@ -19,68 +19,13 @@ La réussite de tes actions dépend des effets de l'alcool. Plus tu as bu plus t
 - oui mais c'est les règles!
 - remarque sanglante. cinglante*
 
-## Les cartes
+*Note: discution réelle qu'il y a eu entre le concepteur du jeu et son frère de fal*
 
-### les PNJ
-
-C'est des perso avec leurs caractéristiques.
-
-64 = 8 filière x 8 villes
-
-### les items
-
-#### one shot
-
-##### Les items valeurs
-
-À utiliser qu'une fois pour le partage de valeurs ou pour soi
-même. Ce sont soit de la nourriture soit de la boisson.
-
-- 4 rebloch' : 4 part +5@
-- 4 Saucisson : 5 part +5@
-- 2 bière : 3 doses +5@
-- 2 génépi : 4 doses +6@
-- 2 gnôle : 6 doses +5@
-- 2 poire : 4 doses +5@
-
-##### Les items "objets"
-
-Qui ont une utilité pour une action précise.
-- 4 capote : pour chopper
-- 4 paillardier : pour chanter
-- 8 pin's : pour ...
-
-#### les permanents
-
-Les verres spéciaux
-- 0 eco cup: 6 doses, tout le monde en a un au début
-- 1 corne: 8 doses
-- 1 pinte: 8 doses
-
-### Les bonus malus
-
-- un potager
-- un crabe : MST , malus en choppe de -4
-
-### récap : le dec item
-
-Le dec items contient :
-- 16 items valeurs
-- 16 items objets
-- 2 verres spéciaux
-Un total de 34 cartes (encore un multiple de 7!)
-
-Note : il n'y a pas d'éco cup, puisque c'est le verre de base que tout le monde à au départ.
-
-### design des cartes
-
-[Les cartes](cartes.html)
-
-#### note sur les arrondis des nombres à virgule
+#### Note sur les arrondis des nombres à virgule
 
 Si les calcules donnent des nombres non entiers, il faut arrondir ces nombres de gré ou de force.
 
-arrondi supérieur
+Arrondi supérieur
 
 ## Le début de partie
 
@@ -91,91 +36,24 @@ Prendre une feuille de papier A3 (c'est mieux, un plan a3) et dessinez le plan d
 Il aura 4 parties:
 
 - Le bar : pour faire le plein de boisson
-
 - la piste de danse : pour tenter de chopper
-
 - la sale à manger : pour se rassasier
 - la tente : pour être tranquille pour chopper ou faire une pls
 
-### Création des persos
-
-Chaque joueur doit passer le test du crie fort. Une fois fini il doit avoir 2 notes sur 14 en sesque et en boisson.
-
-[le test du crie fort](Test_du_crie_fort.md)
-
-Attention, ces calculs doivent être fait par le personne de gauche. Le joueur **NE DOIT PAS** connaître les caractéristiques de son perso.
-
-Son taux optimum d'alcool sera égale à note au crieFort en boisson divisée par 2 plus 5
-
-    ex:  note au crieFort en boisson : 4
-    taux optimum = 4 / 2 + 5 = 7
-
-Son taux max d'alcool sera eagle à son taux optimum d'alcool multiplié par 1,5
-
-    ex:  taux optimum : 8
-    taux max = 8 x 1,5 = 12
-
-La crédibilitruc sera la note au crieFort en sesque divisée par 3, plus 4, plus de résultat d'un lancé d'un dé 7
-
-    note au crieFort en sesque : 12
-    dé7 : 5
-    credibilitruc = 12 / 3 + 4 + 5 = 13
-
-### le support du joueur
-
-Prendre une feuille A4 la plier en 2 pour la rigidifier, ca nous donne donc une feuille A5.
-
-        ____________________
-        |                  |
-        |__________________| 2 cm pliage arrière
-        |                  |
-        |__________________| 2 cm pliage avant
-        |                  |
-      A |__________________| 2 cm pliage avant
-        |                  |
-        |                  |
-        |                  | X cm pliage arrière, X = la moitié de AB
-        |__________________|
-        |                  |
-        |                  |
-        |                  |
-      B |__________________|
-
-de profile on doit avoir ça
-
-    *********************
-    *                   *
-    *    /\             *
-    *   /  \            *
-    *  /    \    /\     *
-    * /      \__/  \    *
-    *                   *
-    *********************
-
-là où il y a le "U" on écrit les taux optimal et taux Max
-
-là où il y a le "O" on met les jetons qui permettent de compter le taux courant
-
-    *********************
-    *                   *
-    *    /\ U           *
-    *   /  \            *
-    *  /    \  O /\     *
-    * /      \__/  \    *
-    *                   *
-    *********************
-
-Le joueur est placé derrière, de telle sort qu'il ne puisse pas voire les taux et le nombre de jetons.
-
 ### Préparation
 
-Choisir le type de partie: apéro 12 tours, soiree 24 tours, congres 42 tours. (sachant que 1 tours correspond à peu pres à 1/4 d'heure réelle)
+Choisir le type de partie:
+- apéro 12 tours
+- soiree 24 tours
+- congres 42 tours.
+
+(sachant que 1 tours correspondait à peu pres à 1/4 d'heure réelle)
 
 Au debut de la partie distribuer des 4 cartes items chaque joueurs.
 
 ## Déroulement d'un tour
 
-Les joueurs jouent les uns à la suite des autres dans l'ordre des aiguilles d'une montre si la partie a lieu dans l'hémisphère nord, sinon dans l'autre sens.
+Les joueurs jouent les uns à la suite des autres dans l'ordre des aiguilles d'une montre si la partie à lieu dans l'hémisphère nord, sinon dans l'autre sens.
 
 Au début du tour on récupère les cartes PNJ (sauf celles occupées) qu'on remet dans le tas de cartes PNJ, on mélange ce tas. Puis on distribue autant de carte PNJ qu'il y a de joueurs et cela sur chaque lieu (sauf la tente).
 
@@ -421,3 +299,130 @@ Durée: 1 tour.
 À la fin de la partie (le nombre de tour), on fait le compte de point @ et c'est celui qui en a le plus (pas dans le caleçon) qui gagne.
 
 Si il y a égalité, je propose qu'on règle ça au chi fou sec.
+
+### Création des persos
+
+Chaque joueur doit passer le test du crie fort. Une fois fini il doit avoir 2 notes sur 14 en sesque et en boisson.
+
+[le test du crie fort](Test_du_crie_fort.md)
+
+Attention, ces calculs doivent être fait par le personne de gauche. Le joueur **NE DOIT PAS** connaître les caractéristiques de son perso.
+
+Son taux optimum d'alcool sera égale à note au crieFort en boisson divisée par 2 plus 5
+
+    ex:  note au crieFort en boisson : 4
+    taux optimum = 4 / 2 + 5 = 7
+
+Son taux max d'alcool sera eagle à son taux optimum d'alcool multiplié par 1,5
+
+    ex:  taux optimum : 8
+    taux max = 8 x 1,5 = 12
+
+La crédibilitruc sera la note au crieFort en sesque divisée par 3, plus 4, plus de résultat d'un lancé d'un dé 7
+
+    note au crieFort en sesque : 12
+    dé7 : 5
+    credibilitruc = 12 / 3 + 4 + 5 = 13
+
+### le support du joueur
+
+Prendre une feuille A4 la plier en 2 pour la rigidifier, ca nous donne donc une feuille A5.
+
+        ____________________
+        |                  |
+        |__________________| 2 cm pliage arrière
+        |                  |
+        |__________________| 2 cm pliage avant
+        |                  |
+      A |__________________| 2 cm pliage avant
+        |                  |
+        |                  |
+        |                  | X cm pliage arrière, X = la moitié de AB
+        |__________________|
+        |                  |
+        |                  |
+        |                  |
+      B |__________________|
+
+de profile on doit avoir ça
+
+    *********************
+    *                   *
+    *    /\             *
+    *   /  \            *
+    *  /    \    /\     *
+    * /      \__/  \    *
+    *                   *
+    *********************
+
+là où il y a le "U" on écrit les taux optimal et taux Max
+
+là où il y a le "O" on met les jetons qui permettent de compter le taux courant
+
+    *********************
+    *                   *
+    *    /\ U           *
+    *   /  \            *
+    *  /    \  O /\     *
+    * /      \__/  \    *
+    *                   *
+    *********************
+
+Le joueur est placé derrière, de telle sort qu'il ne puisse pas voire les taux et le nombre de jetons.
+
+## Les cartes
+
+### les PNJ
+
+C'est des perso avec leurs caractéristiques.
+
+64 = 8 filière x 8 villes
+
+### les items
+
+### Détails : le dec item
+
+Le dec items contient :
+- 16 items valeurs
+- 16 items objets
+- 2 verres spéciaux
+Un total de 34 cartes (encore un multiple de 7!)
+
+Note : il n'y a pas d'éco cup, puisque c'est le verre de base que tout le monde à au départ.
+
+#### one shot
+
+##### Les items valeurs
+
+À utiliser qu'une fois pour le partage de valeurs ou pour soi
+même. Ce sont soit de la nourriture soit de la boisson.
+
+- 4 rebloch' : 4 part +5@
+- 4 Saucisson : 5 part +5@
+- 2 bière : 3 doses +5@
+- 2 génépi : 4 doses +6@
+- 2 gnôle : 6 doses +5@
+- 2 poire : 4 doses +5@
+
+##### Les items "objets"
+
+Qui ont une utilité pour une action précise.
+- 4 capote : pour chopper
+- 4 paillardier : pour chanter
+- 8 pin's : pour ...
+
+#### les permanents
+
+Les verres spéciaux
+- 0 eco cup: 6 doses, tout le monde en a un au début
+- 1 corne: 8 doses
+- 1 pinte: 8 doses
+
+### Les bonus malus
+
+- un potager
+- un crabe : MST , malus en choppe de -4
+
+### design des cartes
+
+[Les cartes](cartes.html)
