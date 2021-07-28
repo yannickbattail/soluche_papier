@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 
 <head>
     <title>Cartes Soluche papier</title>
@@ -16,13 +16,45 @@
             border-color: black;
             margin: 0.1cm;
         }
-        body {
-            width: 17.4cm;
+        input[type="number"] {
+            width: 50px;
+        }
+        input[readonly="readonly"] {
+            background-color: lightgray;
+        }
+        #bar div {
+            border-style: solid;
+            border-width: 2px;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .b_vert {
+            border-color: darkgreen;
+            background-color: green;
+        }
+        .b_orange {
+            border-color: darkorange;
+            background-color: orange;
+        }
+        .b_rouge {
+            border-color: darkred;
+            background-color: red;
         }
         </style>
     </head>
     <body id="body">
         <table class="fiche">
+            <thead>
+                <tr>
+                    <th colspan="3">Fiche perso</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Surnom:  <input type="text"></td>
                 <td>Filière: <input type="text"></td>
@@ -36,16 +68,27 @@
             <tr>
                 <td><button onclick="generate()">générer</button></td>
             </tr>
+            <tr>
+                <th colspan="3">Tour</th>
+            </tr>
+            <tr>
+                <td><button onclick="tour()">Tour suivant</button></td>
+                <td>alchool bu:       <input type="number" value="0" id="alcBu" min="0" step="1"></td>
+                <td>alchool courrant: <input type="number" readonly="readonly" value="0" id="alcCur"></td>
+            </tr>
+            <tr>
+                <td><div id="bar"></div></td>
+            </tr>
         </table>
         <table class="fiche">
             <thead>
                 <tr>
-                    <th>Test du crie fort</th>
+                    <th>Test du crie fort <label style="font-size: 10px;"><input type="checkbox" onclick="hide(gel('tbody'), this.checked)"/>cacher</label></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
                 <tr><th>Questions glouglou: <input type="number" readonly="readonly" value="0" id="glou">/14</th></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà été ivre ? + 1 points #</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà été ivre ? + 1 points</label></td></tr>
                 <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà fait des concours de secs ? (celui qui bois le plus vite son verre) + 1 points</label></td></tr>
                 <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà participé à des jeux à boire ? + 1 points</label></td></tr>
                 <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Etes-vous déjà tombé(e) parce que vous étiez trop ivre ? + 1 points</label></td></tr>
@@ -85,10 +128,16 @@
             function d7() {
                 return getRandomInt(0, 6);
             }
+            function gel(id) {
+                return document.getElementById(id);
+            }
+            function hide(elem, show) {
+                elem.style.display = show?"block":"none";
+            }
 
             function reclacCriFort() {
-                document.getElementById("glou").value = calcScore("glou");
-                document.getElementById("sexe").value = calcScore("sexe");
+                gel("glou").value = calcScore("glou");
+                gel("sexe").value = calcScore("sexe");
             }
             function calcScore(quest) {
                 var questList = document.getElementsByClassName(quest);
@@ -102,10 +151,48 @@
             }
             reclacCriFort();
             function generate() {
-                document.getElementById("alcOpt").value = Math.floor(calcScore("glou") / 2 + 5);
-                document.getElementById("alcMax").value = Math.floor((calcScore("glou") / 2 + 5) * 1.5);
-                document.getElementById("credib").value = Math.floor(calcScore("sexe") / 3 + 4 + d7());
+                gel("alcOpt").value = Math.floor(calcScore("glou") / 2 + 5);
+                gel("alcMax").value = Math.floor((calcScore("glou") / 2 + 5) * 1.5);
+                gel("credib").value = Math.floor(calcScore("sexe") / 3 + 4 + d7());
             }
+            function tour() {
+                gel("alcCur").value = parseInt(gel("alcBu").value) + parseInt(gel("alcCur").value) - 1;
+                gel("alcBu").value = 0;
+                bar();
+            }
+            function bar() {
+                gel("bar").innerHTML = bar_in();
+            }
+            function bar_in() {
+                let alcCur = parseInt(gel("alcCur").value);
+                let alcOpt = parseInt(gel("alcOpt").value);
+                let alcMax = parseInt(gel("alcMax").value);
+                let h = "";
+                for (let i = 1; i <= Math.max(alcCur, alcMax); i++) {
+                    let css = '';
+                    if (i <= alcOpt) {
+                        css = 'b_vert';
+                    } else if (i <= alcMax) {
+                        css = 'b_orange';
+                    } else {
+                        css = 'b_rouge';
+                    }
+                    let c = '&nbsp;';
+                    if (i <= alcCur) {
+                        if (i <= alcOpt) {
+                            c = '😀';
+                        } else if (i <= alcMax) {
+                            c = '🥴';
+                        } else {
+                            c = '🤮';
+                        }
+                    }
+                    h += '<div class="'+css+'">'+c+'</div>';
+                    
+                }
+                return h;
+            }
+            bar();
         </script>
     </body>
 </html>
