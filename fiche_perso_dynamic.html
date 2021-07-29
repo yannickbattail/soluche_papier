@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+    <title>Cartes Soluche papier</title>
+    <meta charset="utf-8">
+    <style>
+        th {
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-bottom-color: gray;
+        }
+        .fiche {
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            margin: 0.1cm;
+        }
+        input[type="number"] {
+            width: 50px;
+        }
+        input[readonly="readonly"] {
+            background-color: lightgray;
+        }
+        #bar div {
+            border-style: solid;
+            border-width: 2px;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .b_vert {
+            border-color: darkgreen;
+            background-color: green;
+        }
+        .b_orange {
+            border-color: darkorange;
+            background-color: orange;
+        }
+        .b_rouge {
+            border-color: darkred;
+            background-color: red;
+        }
+        </style>
+    </head>
+    <body id="body">
+        <table class="fiche">
+            <thead>
+                <tr>
+                    <th colspan="3">Fiche perso</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Surnom:  <input type="text"></td>
+                <td>Filière: <input type="text"></td>
+                <td>Ville:   <input type="text"></td>
+            </tr>
+            <tr>
+                <td>crédibilitruc:   <input type="number" readonly="readonly" value="0" id="credib"></td>
+                <td>alchool optimum: <input type="number" readonly="readonly" value="0" id="alcOpt"></td>
+                <td>alchool max:     <input type="number" readonly="readonly" value="0" id="alcMax"></td>
+            </tr>
+            <tr>
+                <td><button onclick="generate()">générer</button></td>
+            </tr>
+            <tr>
+                <th colspan="3">Tour</th>
+            </tr>
+            <tr>
+                <td><button onclick="tour()">Tour suivant</button></td>
+                <td>alchool bu:       <input type="number" value="0" id="alcBu" min="0" step="1"></td>
+                <td>alchool courrant: <input type="number" readonly="readonly" value="0" id="alcCur"></td>
+            </tr>
+            <tr>
+                <td><div id="bar"></div></td>
+            </tr>
+        </table>
+        <table class="fiche">
+            <thead>
+                <tr>
+                    <th>Test du crie fort <label style="font-size: 10px;"><input type="checkbox" onclick="hide(gel('tbody'), this.checked)"/>cacher</label></th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr><th>Questions glouglou: <input type="number" readonly="readonly" value="0" id="glou">/14</th></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà été ivre ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà fait des concours de secs ? (celui qui bois le plus vite son verre) + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà participé à des jeux à boire ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Etes-vous déjà tombé(e) parce que vous étiez trop ivre ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà bu assez pour vomir ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà vomi sur vous ou sur quelqu'un d'autre ? + 1 point</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Avez-vous déjà participé à un barathon ? (Tous les bars d'une ville ou d'une rue) ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Buvez vous régulièrement (au moins trois fois par semaine) ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Avez-vous déjà été ivre pendant plus de 48 heures ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Vous êtes-vous déjà réveillé(e) en vous demandant où vous étiez et qui était la personne à côté de vous ? + 2 points</label></td></tr>
+                <tr><th>Questions sèsque: <input type="number" readonly="readonly" value="0" id="sexe">/14</th></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu des relations sexuelles ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà été impliqué(e) dans une fellation ou un cunnilingus ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu un rapport anal ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà fait un 69 ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des relations sexuelles sans utiliser de moyen de contraception ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu une MST (maladie sexuellement transmissible) ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des relations sexuelles avec plus d'une personne en même temps ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des rapports homosexuels (ou contraires à votre appartenance sexuelle) ? + 2 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu des relations sexuelles avec quelqu'un de votre famille ? + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu un coup d'une nuit ? (Une histoire d'un soir avec relation sexuelle) + 1 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="0">Vous êtes-vous déjà posé des questions sur la vie sexuelle des personnages de dessins animés ? + 0 points</label></td></tr>
+            </tbody>
+        </table>
+        <script>
+            /**
+             * Returns a random integer between min (inclusive) and max (inclusive).
+             * The value is no lower than min (or the next integer greater than min
+             * if min isn't an integer) and no greater than max (or the next integer
+             * lower than max if max isn't an integer).
+             * Using Math.round() will give you a non-uniform distribution!
+             */
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            function d7() {
+                return getRandomInt(0, 6);
+            }
+            function gel(id) {
+                return document.getElementById(id);
+            }
+            function hide(elem, show) {
+                elem.style.display = show?"block":"none";
+            }
+
+            function reclacCriFort() {
+                gel("glou").value = calcScore("glou");
+                gel("sexe").value = calcScore("sexe");
+            }
+            function calcScore(quest) {
+                var questList = document.getElementsByClassName(quest);
+                var questPoints = 0;
+                for (const questElem of questList) {
+                    if (questElem.checked) {
+                        questPoints += parseInt(questElem.value);
+                    }
+                }
+                return questPoints;
+            }
+            reclacCriFort();
+            function generate() {
+                gel("alcOpt").value = Math.floor(calcScore("glou") / 2 + 5);
+                gel("alcMax").value = Math.floor((calcScore("glou") / 2 + 5) * 1.5);
+                gel("credib").value = Math.floor(calcScore("sexe") / 3 + 4 + d7());
+            }
+            function tour() {
+                gel("alcCur").value = parseInt(gel("alcBu").value) + parseInt(gel("alcCur").value) - 1;
+                gel("alcBu").value = 0;
+                bar();
+            }
+            function bar() {
+                gel("bar").innerHTML = bar_in();
+            }
+            function bar_in() {
+                let alcCur = parseInt(gel("alcCur").value);
+                let alcOpt = parseInt(gel("alcOpt").value);
+                let alcMax = parseInt(gel("alcMax").value);
+                let h = "";
+                for (let i = 1; i <= Math.max(alcCur, alcMax); i++) {
+                    let css = '';
+                    if (i <= alcOpt) {
+                        css = 'b_vert';
+                    } else if (i <= alcMax) {
+                        css = 'b_orange';
+                    } else {
+                        css = 'b_rouge';
+                    }
+                    let c = '&nbsp;';
+                    if (i <= alcCur) {
+                        if (i <= alcOpt) {
+                            c = '😀';
+                        } else if (i <= alcMax) {
+                            c = '🥴';
+                        } else {
+                            c = '🤮';
+                        }
+                    }
+                    h += '<div class="'+css+'">'+c+'</div>';
+                    
+                }
+                return h;
+            }
+            bar();
+        </script>
+    </body>
+</html>
