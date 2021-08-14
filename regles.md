@@ -6,9 +6,9 @@
 
 Idée: l'effet de l'alcool est retardé et si tu n'as pas mangé avant, c'est bien pire!
 
-La réussite de tes actions dépend des effets de l'alcool. Plus tu as bu plus tu réussiras, jusqu’à une limite optimum, après cette limite tes actions auront des comportement plutôt aléatoire. Au delà d'une limite max ca sera la PLS (ca se traduit par le fait que le joueur doive passer ses tours jusqu'à ce que sont taux redescende en dessous du max).
+La réussite de tes actions dépend des effets de l'alco... heu des MP. Plus tu as bu plus tu réussiras, jusqu’à une limite optimum, après cette limite tes actions auront des comportement plutôt aléatoire. Au delà d'une limite max ca sera la PLS (ca se traduit par ... une PLS le joueur qui passe son tour jusqu'à ce que ses MP soit revenu à un nuveau gérable).
 
-### Un dé7
+### Un dé7 mais pourkwaaa ?
 
 - je sais plus si je t'ai dit? soluche papier se joue avec un dé7
 - lol! un dé6litre ?
@@ -23,13 +23,13 @@ La réussite de tes actions dépend des effets de l'alcool. Plus tu as bu plus t
 
 ### Note sur les arrondis des nombres à virgule
 
-Si les calcules donnent des nombres non entiers, il faut arrondir ces nombres de gré ou de force: Arrondi supérieur.
+Si les calculs donnent des nombres non entiers, il faut les arrondir de gré ou de force: Arrondi supérieur.
 
 ## Le début de partie
 
 ### le plateau de jeux
 
-Prendre une feuille de papier A3 (c'est mieux, un plan a3) et dessinez le plan du congrès.
+Prendre une feuille et faire le plan en A3 du congrès. (au format A3)
 
 Il aura 4 parties:
 
@@ -396,9 +396,3 @@ Qui ont une utilité pour une action précise.
 ### design des cartes
 
 [Les cartes](cartes.html)
-
-
-
-sec bizuth
-
-charette
