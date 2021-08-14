@@ -49,6 +49,8 @@ Choisir le type de partie:
 
 (sachant que 1 tours correspondrait à peu pres à 1/4 d'heure réelle)
 
+Séparer les cartes potager et carbe de la pioche.
+
 Au debut de la partie distribuer des 4 cartes items chaque joueurs.
 
 ### Création des persos
@@ -59,13 +61,15 @@ Chaque joueur doit passer le test du crie fort. Une fois fini il doit avoir 2 no
 
 Son nombre optimum de MP sera égale à note au crieFort en boisson divisée par 2 plus 5
 
-    ex:  note au crieFort en boisson : 4
+    ex: note au crieFort en boisson : 4
     MP optimum = 4 / 2 + 5 = 7
 
 Son nombre max de MP sera eagle à son nombre optimum de MP multiplié par 1,5
 
     ex:  MP optimum : 8
     MP max = 8 x 1,5 = 12
+
+> Note: si les MP opti ou max changent au cours de la partie, MP opti doit etre au minimum à 2 point du MP max : incrementer MP max si besoin 
 
 La crédibilitruc sera la note au crieFort en sesque divisée par 3, plus 4, plus de résultat d'un lancé d'un dé 7
 
@@ -77,7 +81,7 @@ Les persos auront aussi 5 variables (valeurs qui changent (beaucoup) tout au lon
 - les MP : en rapport avec le glouglou
 - les MP en attentes
 - les PV : en rapport avec le bouffe
-- les points de dignichose: (celui qui en a le plus gagne) Ils seront notés @ dans le reste règles
+- les points de dignichose (notés @): (celui qui en a le plus gagne) Ils seront notés @ dans le reste règles
 - les bonus de choppe
 
 ## Déroulement d'un tour de table
@@ -102,7 +106,11 @@ Les PV sont ajoutés directement.
 
 Tirer 2 cartes.
 
-Les objets permanents peuvent être utilisés tout de suite.
+Les items permanents peuvent être posés maintant (sur toi ou un autre perso) ou gardés.
+
+Les one shot peuvent être utilisés maintant (sur toi ou un autre perso) ou gardés.
+
+Les items ou items valeur sont à utiliser lors des actions.
 
 Au début de son tour, le joueur peut se déplacer dans un autre lieu.
 
