@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+    <title>Cartes Soluche papier</title>
+    <meta charset="utf-8">
+    <style>
+        .carte {
+            width: 4cm;
+            height: 5cm;
+            border-radius: 0.5cm;
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            display: inline-block;
+            margin: 0.1cm;
+            page-break-inside: avoid;
+            font-size: 16px;
+        }
+        th {
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-bottom-color: black;
+        }
+        i {
+            font-size: 12px;
+        }
+        body {
+            width: 17.4cm;
+        }
+        </style>
+    </head>
+    <body id="body">
+
+    </body>
+    <script>
+
+const cardList = [];
+
+const filieres = [
+    "Rose",
+    "Droit",
+    "Sciences",
+    "Jaune",
+    "Sage-pouf",
+    "Pharma",
+    "Médecine",
+    "Ingé",
+];
+
+const villes = [
+    "Savoie",
+    "Grenoble",
+    "Lyon",
+    "Monpeul",
+    "Valence",
+    "Aix",
+    "Marseille",
+    "Dijon"
+];
+
+for (let filiereIndex = 0; filiereIndex < filieres.length; filiereIndex++) {
+    const filiere = filieres[filiereIndex];
+    for (let villeIndex = 0; villeIndex < villes.length; villeIndex++) {
+        const ville = villes[villeIndex];
+        const pnj = {
+            title: filiere + ' ' + ville,
+            line1: "TYPE: pnj",
+            line2: "boisson:" + (7 + villeIndex),
+            line3: "boissonOpti:" + (10),
+            line4: "boisson:" + (15),
+            line5: "credibilitruc:" + (7 + filiereIndex),
+        };
+        cardList.push(pnj);
+	}
+}
+
+
+
+function buildCard(card) {
+    return '' +
+        '<table class="carte">' +
+        '    <thead>' +
+        '        <tr>' +
+        '           <th>' + card.title + '</th>' +
+        '        </tr>' +
+        '   </thead>' +
+        '   <tbody>' +
+        '       <tr>' +
+        '           <td>' + card.line1 + '</td>' +
+        '       </tr>' +
+        '       <tr>' +
+        '           <td>' + card.line2 + '</td>' +
+        '       </tr>' +
+        '       <tr>' +
+        '           <td>' + card.line3 + '</td>' +
+        '       </tr>' +
+        '       <tr>' +
+        '           <td>' + card.line4 + '</td>' +
+        '       </tr>' +
+        '       <tr>' +
+        '           <td>' + card.line5 + '</td>' +
+        '       </tr>' +
+        '</tbody>' +
+        '</table>';
+}
+
+let html = '';
+for (const card of cardList) {
+    html += buildCard(card)
+}
+
+document.getElementById('body').innerHTML = html;
+    </script>
+</html>
