@@ -4,7 +4,7 @@
 
 ## Les concepts
 
-Idée: l'effet de l'alcool est retardé et où tu ne connais pas trop les quantités d'alcool ni combien tu tiens. Si tu n'as pas mangé avant, c'est bien pire!
+Idée: l'effet de l'alcool est retardé et si tu n'as pas mangé avant, c'est bien pire!
 
 La réussite de tes actions dépend des effets de l'alcool. Plus tu as bu plus tu réussiras, jusqu’à une limite optimum, après cette limite tes actions auront des comportement plutôt aléatoire. Au delà d'une limite max ca sera la PLS (ca se traduit par le fait que le joueur doive passer ses tours jusqu'à ce que sont taux redescende en dessous du max).
 
@@ -21,11 +21,9 @@ La réussite de tes actions dépend des effets de l'alcool. Plus tu as bu plus t
 
 *Note: discution réelle qu'il y a eu entre le concepteur du jeu et son frère de fal*
 
-#### Note sur les arrondis des nombres à virgule
+### Note sur les arrondis des nombres à virgule
 
-Si les calcules donnent des nombres non entiers, il faut arrondir ces nombres de gré ou de force.
-
-Arrondi supérieur
+Si les calcules donnent des nombres non entiers, il faut arrondir ces nombres de gré ou de force: Arrondi supérieur.
 
 ## Le début de partie
 
@@ -43,82 +41,102 @@ Il aura 4 parties:
 ### Préparation
 
 Choisir le type de partie:
-- apéro 12 tours
-- soiree 24 tours
-- congres 42 tours.
+- apéro 15 tours: avec 1 repas au tour 8)
+- soiree 24 tours: avec 2 repas (tous les 10 tours)
+- congres 42 tours: avec 4 repas (tous les 10 tours)
 
-(sachant que 1 tours correspondait à peu pres à 1/4 d'heure réelle)
+> Note: suivre les tours faits pour savoir quand placer les repas
+
+(sachant que 1 tours correspondrait à peu pres à 1/4 d'heure réelle)
+
+Séparer les cartes potager et carbe de la pioche.
 
 Au debut de la partie distribuer des 4 cartes items chaque joueurs.
 
-## Déroulement d'un tour
+### Création des persos
+
+Chaque joueur doit passer le test du crie fort. Une fois fini il doit avoir 2 notes sur 14 en sesque et en boisson.
+
+[le test du crie fort](Test_du_crie_fort.md)
+
+Son nombre optimum de MP sera égale à note au crieFort en boisson divisée par 2 plus 5
+
+    ex: note au crieFort en boisson : 4
+    MP optimum = 4 / 2 + 5 = 7
+
+Son nombre max de MP sera eagle à son nombre optimum de MP multiplié par 1,5
+
+    ex:  MP optimum : 8
+    MP max = 8 x 1,5 = 12
+
+> Note: si les MP opti ou max changent au cours de la partie, MP opti doit etre au minimum à 2 point du MP max : incrementer MP max si besoin 
+
+La crédibilitruc sera la note au crieFort en sesque divisée par 3, plus 4, plus de résultat d'un lancé d'un dé 7
+
+    note au crieFort en sesque : 12
+    dé7 : 5
+    credibilitruc = 12 / 3 + 4 + 5 = 13
+
+Les persos auront aussi 5 variables (valeurs qui changent (beaucoup) tout au long du jeux)
+- les MP : en rapport avec le glouglou
+- les MP en attentes
+- les PV : en rapport avec le bouffe
+- les points de dignichose (notés @): (celui qui en a le plus gagne) Ils seront notés @ dans le reste règles
+- les bonus de choppe
+
+## Déroulement d'un tour de table
 
 Les joueurs jouent les uns à la suite des autres dans l'ordre des aiguilles d'une montre si la partie à lieu dans l'hémisphère nord, sinon dans l'autre sens.
 
-Au début du tour on récupère les cartes PNJ (sauf celles occupées) qu'on remet dans le tas de cartes PNJ, on mélange ce tas. Puis on distribue autant de carte PNJ qu'il y a de joueurs et cela sur chaque lieu (sauf la tente).
-
-    Ex: partie à 4 joueurs,
-    4 cartes au bar
-    4 cartes sur la piste de danse
-    4 cartes à la salle à manger
+Au début du tour on récupère les cartes PNJ (sauf celles occupées) qu'on remet dans le tas de cartes PNJ, on mélange ce tas. Puis on complete chaque lieu (sauf la tente) pour qu'il y ai 4 perso par lieu (pers joueur + PNJ).
 
 ### déroulement du tour du joueur
 
 #### début du tour
 
-Enlever 1 jeton de boisson et de nourriture de la pile du perso.
+Enlever 1 MP et 1 PV.
 
-S'il y a des jetons de boisson en attente les ajouter sur la pile du perso.
+Ajouter les MP en attentes aux MP si le perso n'a plus de PV ajouter le double des MP en attentes.
 
-Pour la suite du tour, tous les jetons de boisson gagné sont placé en attente devant le joueur (mais caché de lui). Ils seront ajouté au début du prochain tour du joueur.
+Si les MP dépasse la limite max, le joueur passe son tour (voir: PLS involontaire).
 
-ATTENTION: si la pile de nourriture est vide, multiplié par 2 les jetons de boisson ajoutés en attente.
+Pour la suite du tour, tous les MP gagné sont placés en attente. Ils seront ajouté au début du prochain tour du joueur.
 
-Les jetons de nourriture sont ajouté directement.
+Les PV sont ajoutés directement.
 
-Tirer des cartes items jusqu'à en avoir 4 dans la main.
+Tirer 2 cartes.
 
-Les objets permanents peuvent être utilisé tout de suite.
+Les items permanents peuvent être posés maintant (sur toi ou un autre perso) ou gardés.
+
+Les one shot peuvent être utilisés maintant (sur toi ou un autre perso) ou gardés.
+
+Les items ou items valeur sont à utiliser lors des actions.
+
+Au début de son tour, le joueur peut se déplacer dans un autre lieu.
+
+Puis il exécute son action.
 
 #### l'action
 
-Le joueur ne joue que s'il ne fait pas déjà une autre action (actions en plusieurs tours).
-
-Au début de son tour, le joueur peut se déplacer dans un autre lieu.
+Le joueur ne joue que s'il ne fait pas déjà une autre action (actions en plusieurs tours) ouy si il est en PLS.
 
 Puis il effectue l'action qu'il souhaite. Et reste dans ce lieu jusqu'à son prochain tour.
 
 Note: le perso peut être la cible des autres et même plusieurs fois.
 
-### le verre du joueur
-
-Le but c'est que le verre ne soit pas vide quand on en a besoin.
-
-Quand est-ce qu'on peux remplir son verre?
-
-- au bar quand on veut (tant que je perso est présent dans ce lieu)
-
-- avec une carte type valeur boisson, on ajoute dans le verre les doses écrites sur la carte. (mais on ne gagne pas les points de partage de valeur)
-
-- on peut demande une dose à un autre joueur, -1@ pour moi, +1@ pour lui.
-
-Si on a besoin de boire mais que son verre est vide -2@.
-
-Note: On peut avoir des verres avec plus de contenance que l'eco-cup du welcome pack.
-
 ## les événements
 
 ### les repas
 
-Tous les 10 tours on lance un repas. Tout le monde se retrouve à la cuisine pour manger.
+Tous les 10 tours on lance un repas pour refaire le plein de PV. Tout le monde se retrouve à la cuisine pour manger pendant 2 tours (on ne peut pas changer de lieux).
 
-Comme une action, on est occupé pendant toute la durée de l'événement.
+On peut quand meme faire les actions de la cuisine.
 
 Si un personnage est occupé (action en plusieurs tours (chopper, PLS)), il rate la moitié ou la totalité du repas, du il ne gagne respectivement que la moitié ou rien des parts de boisson et nourritures.
 
-Boisson: +2 (1 par tour)
+MP: +2 (1 par tour)
 
-Nourriture: +5
+PV: +4 (1 par tour)
 
 Durée: 2 tours
 
@@ -128,27 +146,27 @@ Note: vu que 2 tours ce sont passés, on a perdu (-1 en boisson et nourriture, c
 
 ### le bar
 
-Sert à faire le plein de boisson. On peu y re-remplir son verre quand on veut.
+On peu faire les actions suivantes : chanter, pin'ser, concours de secs, faire un VT, dragger.
 
-On peu faire les actions suivantes : chanter, pin'ser, concours de secs, faire un VT, essayer de chopper.
-
-Actions que l'on peut vous faire :  pin'ser, concours de secs, essayer de chopper
+Actions que l'on peut vous faire :  pin'ser, concours de secs, dragger
 
 ### la piste de danse
 
-Sert à chauffer. Tant que le perso est dans ce lieu, il gagne +1 en bonus de choppe.
+Sert à chauffer.
 
-On peu faire les actions suivantes : pin'ser, faire un VT, essayer de chopper.
+Tant que le perso est dans ce lieu, il gagne +1 en bonus de choppe.
 
-Actions que l'on peut vous faire : valeurs, pin'ser, essayer de chopper
+On peu faire les actions suivantes : pin'ser, faire un VT, dragger.
+
+Actions que l'on peut vous faire : valeurs, pin'ser, dragger
 
 ### la cuisine
 
 Là où l'on fait les repas
 
-On peu faire les actions suivantes : chanter, partager des valeurs, pin'ser, faire un VT, essayer de chopper.
+On peu faire les actions suivantes : chanter, partager des valeurs, pin'ser, faire un VT, dragger.
 
-Actions que l'on peut vous faire : valeurs, pin'ser, essayer de chopper
+Actions que l'on peut vous faire : valeurs, pin'ser, dragger
 
 ### la tente
 
@@ -162,30 +180,36 @@ Actions que l'on peut vous faire : chopper, chasse au potager.
 
 ### Chanter
 
-Plus tu as bu, mieux tu chantes.
+Tu lances un chanson : le joueur doit choisir une chanson qui n'a pas été chantée pendant le partie et chanter un couplet ou refrain.
 
-si taux de boisson est inférieur au taux optimal. gagne de +1@ à +6@ au prorata du taux de boisson / taux optimal.
+Tous les persos dans le lieux doivent suivre.
 
-si taux de boisson est supérieur au taux optimal, tu chantes faux. -1@
+Plus tu as de MP, mieux tu chantes.
 
-Boisson : +1, Chanson! Cannon!
+Si ton nombre de MP est inférieur au nombre optimal. gagne de +1@ à +6@ au prorata du nombre de MP / nombre optimal de MP.
+
+si ton nombre de MP est supérieur au taux optimal, tu chantes faux. -3@
+
+MP : +1, Chanson! Cannon!
 
 cout: -1 paillardier
+
+* tout les persos dans le lieux recoivent leurs MP et @ * 
 
 durée: 1 tour
 
 ### Partager des valeurs
 
-il prend une carte valeur, choisi des joueurs avec partager ses valeurs dans le même lieu où il se trouve. (avec un max de joueurs (lui compris) qu'il y a de parts indiquées sur la carte)
+Tu joues une carte valeur, choisis les joueurs avec qui partager ses valeurs (dans le même lieu) avec un max de joueurs (lui compris) qu'il y a de parts indiquées sur la carte
 
 le joueur gagne autant de @ qu'il y a de joueurs
 
-Les participants et lui même, gagne les points de nourriture et boisson indiquées sur la carte.
+Les participants et lui même, gagne les PV et les MP indiquées sur la carte.
 
     ex: 2 joueur sont au bar, je les invite à partager un rebloch à 4 parts
     (à noter qu'une part est PERDU, ben tant pis c'est comme ca)
     je gagne 2 + 1 = 3@
-    le 2 participants et moi gagnons 1 point en nourriture
+    les 2 participants et toi gagnent 1 PV
 
 cout: -1 carte valeur
 
@@ -193,9 +217,9 @@ durée: 1 tour, 0 tour pour les personnes ciblées
 
 ### Pin'ser
 
-+2@
++2@ pour toi
 
-+1@ et +1 en boisson pour lui
++1@ et +1MP pour lui
 
 cout: -1 pin's
 
@@ -203,23 +227,41 @@ durée: 1 tour
 
 ### concours de sec
 
-À tour de rôle les 2 joueurs boivent un sec jusqu'à ce qu'un des 2 abandonnent.
+À tour de rôle les 2 joueurs boivent un sec jusqu'à ce qu'un des 2 abandonne.
 
-Bien sur on ajoute autant de point de boisson qu'il y a eu de sec
+Bien sur on ajoute autant de MP qu'il y a eu de sec
+
++1@ par sec bu pour le gagnant
+
+-1@ pour le perdant
+
+-5@ pour tout perso abandonnant à 1 ou 2 secs. (un ga pas bonne ambiance quoi!)
+
+    ex: perso1 défie perso2
+    - perso1: je prend 1 sec, tu suis ?
+    - perso2: je suis
+    - perso1: 1 autre
+    - perso2: je suis
+    - perso1: encore 1
+    - perso2: je suis
+    - perso1: j'abandonne
+    perso1 = +3MP -1@ (il a abandonné)
+    perso2 = +3MP -3@ (il a gagné)
 
 Attention à la PLS après coup.
-
 durée: 1 tour
 
-### ‎faire un VT
+### faire un VT
 
--4@: -4 en boisson
+-5@
+
+-3MP
 
 durée: 1 tour
 
 ### PLS volontaire
 
-passe son tour
+Passer son tour. Le problème c'est qu'on sais pas quand on va se reveiller.
 
 Le tour suivant, on lance un dé7, si > 4 il se réveil, sinon la PLS continue.
 
@@ -229,15 +271,21 @@ Le tour suivant, on lance un dé7, si > 2 il se réveil, sinon la PLS continue.
 
 Le tour suivant il se réveille.
 
-### PLS involontaire (taux de boisson au dessus du max)
+-3@
 
-Passe son tour jusqu'à que son taux de boisson passe en dessous du max
+### PLS involontaire
 
-### Essayer de chopper (1 tour)
+Quand le nombre de MP est au dessus du max.
 
-Le joueur qui essaye de chopper choisi une cible parmi les PNJ du lieu (tas de cartes) ou parmi les personnages s'y trouvant aussi.
+Le joueur passe son tour jusqu'à que son taux de boisson passe en dessous du max.
 
-Ensuite le joueur doit sortir une punch line et les autres joueurs vote la qualité de celle-ci.
+-1@ par tour
+
+### dragger (1 tour)
+
+Le perso qui dragger choisi une target parmi les PNJ ou persos joueurs présent dans le lieu.
+
+Ensuite le joueur doit sortir une punch line (une phrase d'accroche) et les autres joueurs votent la qualité de celle-ci.
 
 - pouce en haut : ça passe nickel comme papa dans mamie
 - pouce horizontale : bourré ça peut passer
@@ -245,13 +293,11 @@ Ensuite le joueur doit sortir une punch line et les autres joueurs vote la quali
 
 Et on fait les comptes.
 
-On ne sais si ça a réussi qu'au début du tour suivant.
-
-Mais comment on le sais?
+Mais comment on sais si ca a marché?
 
 On calcule la différence de crédibilitruc entre les 2 persos en valeur absolue
 
-au quel on soustrait les bonus/malus de choppe puis on soustrait au résultat un dé7.
+auquel on soustrait les bonus/malus de choppe puis on soustrait au résultat un dé7.
 
 Si la valeur finale est négative ou égale à zéro ca va baiser. Sinon ... couilles bleues (rien de se passe, retente ta chance)
 
@@ -265,17 +311,19 @@ Ex:
     2 - 0 - 3 = -3
     ==> la tente va bouger ce soir
 
+Si ca a réussi au tour suivant on passe à obligatoirement l'action chopper pour les 2 persos.
+
 ### Chopper (3 tours)
 
-si taux de boisson est inférieur au taux optimal. gagne +40@
+si le nombre de MP est inférieur au nombre optimal. gagne +15@
 
-si taux de boisson est supérieur au taux optimal, tu bandes mou ou tu fais l'étoile de mer. gagne +5@
+si nombre de MP est supérieur au nombre optimal, tu bandes mou ou tu fais l'étoile de mer. gagne +5@
 
 la meme règle s'applique au joueur ciblé (sauf si c'est un PNJ)
 
 si le personnage à une carte capote en main, il la défausse. (oui 2 filles ensemble utilisent des capotes)
 
-si il n'en a pas on lance un dé7, si le résultat est inférieur ou égale à 3, le personage reçoit l'insigne du crabe (MST) : malus de -5 en choppe
+si il n'en a pas on lance un dé7, si le résultat est inférieur ou égale à 3, le personage reçoit (l'insigne du crabe (MST)) : malus de -5 en choppe
 
 ### chasse au potager
 
@@ -284,7 +332,9 @@ Vous décidez de partir à leur recherche pour les prendre en flagrant délit.
 
 Est-ce que vous les avez trouvé ? Pour cela lancez un dé7 et vous divisé la valeur par 2.
 
-Et heu? Est-ce qu'ils ont été discrets ? Pour cela lancez un dé7 et vous divisé la valeur par 2. (Si il s'agit de 2 perso (pas 1 perso et 1 PNJ) un seul lancé de dé pour les 2.
+Et eux? Est-ce qu'ils ont été discrets ?
+
+Pour cela il lance un dé7 et vous divisé la valeur par 2. (Si il s'agit de 2 perso (pas 1 perso et 1 PNJ) un seul lancé de dé pour les 2.
 
 Si vous avez la même valeur, boom! Potager !
 
@@ -296,79 +346,9 @@ Durée: 1 tour.
 
 ## fin de la partie
 
-À la fin de la partie (le nombre de tour), on fait le compte de point @ et c'est celui qui en a le plus (pas dans le caleçon) qui gagne.
+À la fin de la partie (le nombre de tour), on fait le compte de points de dignichose (les @) et c'est celui qui en a le plus (pas dans le caleçon) qui gagne.
 
 Si il y a égalité, je propose qu'on règle ça au chi fou sec.
-
-### Création des persos
-
-Chaque joueur doit passer le test du crie fort. Une fois fini il doit avoir 2 notes sur 14 en sesque et en boisson.
-
-[le test du crie fort](Test_du_crie_fort.md)
-
-Attention, ces calculs doivent être fait par le personne de gauche. Le joueur **NE DOIT PAS** connaître les caractéristiques de son perso.
-
-Son taux optimum d'alcool sera égale à note au crieFort en boisson divisée par 2 plus 5
-
-    ex:  note au crieFort en boisson : 4
-    taux optimum = 4 / 2 + 5 = 7
-
-Son taux max d'alcool sera eagle à son taux optimum d'alcool multiplié par 1,5
-
-    ex:  taux optimum : 8
-    taux max = 8 x 1,5 = 12
-
-La crédibilitruc sera la note au crieFort en sesque divisée par 3, plus 4, plus de résultat d'un lancé d'un dé 7
-
-    note au crieFort en sesque : 12
-    dé7 : 5
-    credibilitruc = 12 / 3 + 4 + 5 = 13
-
-### le support du joueur
-
-Prendre une feuille A4 la plier en 2 pour la rigidifier, ca nous donne donc une feuille A5.
-
-        ____________________
-        |                  |
-        |__________________| 2 cm pliage arrière
-        |                  |
-        |__________________| 2 cm pliage avant
-        |                  |
-      A |__________________| 2 cm pliage avant
-        |                  |
-        |                  |
-        |                  | X cm pliage arrière, X = la moitié de AB
-        |__________________|
-        |                  |
-        |                  |
-        |                  |
-      B |__________________|
-
-de profile on doit avoir ça
-
-    *********************
-    *                   *
-    *    /\             *
-    *   /  \            *
-    *  /    \    /\     *
-    * /      \__/  \    *
-    *                   *
-    *********************
-
-là où il y a le "U" on écrit les taux optimal et taux Max
-
-là où il y a le "O" on met les jetons qui permettent de compter le taux courant
-
-    *********************
-    *                   *
-    *    /\ U           *
-    *   /  \            *
-    *  /    \  O /\     *
-    * /      \__/  \    *
-    *                   *
-    *********************
-
-Le joueur est placé derrière, de telle sort qu'il ne puisse pas voire les taux et le nombre de jetons.
 
 ## Les cartes
 
@@ -385,12 +365,9 @@ C'est des perso avec leurs caractéristiques.
 Le dec items contient :
 - 16 items valeurs
 - 16 items objets
-- 2 verres spéciaux
 Un total de 34 cartes (encore un multiple de 7!)
 
-Note : il n'y a pas d'éco cup, puisque c'est le verre de base que tout le monde à au départ.
-
-#### one shot
+### Les items one shot
 
 ##### Les items valeurs
 
@@ -411,14 +388,7 @@ Qui ont une utilité pour une action précise.
 - 4 paillardier : pour chanter
 - 8 pin's : pour ...
 
-#### les permanents
-
-Les verres spéciaux
-- 0 eco cup: 6 doses, tout le monde en a un au début
-- 1 corne: 8 doses
-- 1 pinte: 8 doses
-
-### Les bonus malus
+#### Les items les permanents
 
 - un potager
 - un crabe : MST , malus en choppe de -4
@@ -426,3 +396,9 @@ Les verres spéciaux
 ### design des cartes
 
 [Les cartes](cartes.html)
+
+
+
+sec bizuth
+
+charette
