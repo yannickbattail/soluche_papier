@@ -140,8 +140,8 @@
                 gel("sexe").value = calcScore("sexe");
             }
             function calcScore(quest) {
-                var questList = document.getElementsByClassName(quest);
-                var questPoints = 0;
+                let questList = document.getElementsByClassName(quest);
+                let questPoints = 0;
                 for (const questElem of questList) {
                     if (questElem.checked) {
                         questPoints += parseInt(questElem.value);
@@ -151,9 +151,9 @@
             }
             reclacCriFort();
             function generate() {
-                gel("alcOpt").value = Math.floor(calcScore("glou") / 2 + 5);
-                gel("alcMax").value = Math.floor((calcScore("glou") / 2 + 5) * 1.5);
-                gel("credib").value = Math.floor(calcScore("sexe") / 3 + 4 + d7());
+                gel("alcOpt").value = Math.ceil(calcScore("glou") / 2 + 5);
+                gel("alcMax").value = Math.ceil((calcScore("glou") / 2 + 5) * 1.5);
+                gel("credib").value = Math.ceil(calcScore("sexe") / 3 + 4 + d7());
             }
             function tour() {
                 gel("alcCur").value = parseInt(gel("alcBu").value) + parseInt(gel("alcCur").value) - 1;
