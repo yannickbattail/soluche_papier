@@ -46,6 +46,9 @@
             border-color: darkred;
             background-color: red;
         }
+        .rouge {
+            color: red;
+        }
         </style>
     </head>
     <body id="body">
@@ -61,55 +64,59 @@
                 <td>Ville:   <input type="text"></td>
             </tr>
             <tr>
-                <td>crédibilitruc:   <input type="number" readonly="readonly" value="0" id="credib"></td>
-                <td>alchool optimum: <input type="number" readonly="readonly" value="0" id="alcOpt"></td>
-                <td>alchool max:     <input type="number" readonly="readonly" value="0" id="alcMax"></td>
-            </tr>
-            <tr>
-                <td><button onclick="generate()">générer</button></td>
+                <td>Crédibilitruc: <input type="number" readonly="readonly" value="0" id="credib"></td>
+                <td>MP opimum:     <input type="number" readonly="readonly" value="0" id="mpOpti"></td>
+                <td>MP max:        <input type="number" readonly="readonly" value="0" id="mpMax"></td>
             </tr>
             <tr>
                 <th colspan="3">Tour</th>
             </tr>
             <tr>
                 <td><button onclick="tour()">Tour suivant</button></td>
-                <td>alchool bu:       <input type="number" value="0" id="alcBu" min="0" step="1"></td>
-                <td>alchool courrant: <input type="number" readonly="readonly" value="0" id="alcCur"></td>
+            </tr>
+            <tr>
+                <td>PV:            <input type="number" value="0" id="pv"></td>
+                <td>MP en attente: <input type="number" value="0" id="mpAtt" min="0" step="1"></td>
+                <td>Bonus chope:   <input type="number" value="0" id="chope"></td>
+            </tr>
+            <tr>
+                <td>MP:            <input type="number" readonly="readonly" value="0" id="mp"></td>
+                <td>Dignichose @:  <input type="number" readonly="readonly" value="0" id="dign"></td>
             </tr>
             <tr>
                 <td><div id="bar"></div></td>
             </tr>
         </table>
-        <table class="fiche">
+        <table class="fiche" id="CriFort">
             <thead>
                 <tr>
-                    <th>Test du crie fort <label style="font-size: 10px;"><input type="checkbox" onclick="hide(gel('tbody'), this.checked)"/>cacher</label></th>
+                    <th>Test du crie fort <button onclick="generate()">générer la fiche perso</button></th>
                 </tr>
             </thead>
-            <tbody id="tbody">
-                <tr><th>Questions glouglou: <input type="number" readonly="readonly" value="0" id="glou">/14</th></tr>
+            <tbody>
+                <tr><th>Questions glouglou: <input type="hidden" readonly="readonly" value="0" id="glou">/14</th></tr>
                 <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà été ivre ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà fait des concours de secs ? (celui qui bois le plus vite son verre) + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà participé à des jeux à boire ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Etes-vous déjà tombé(e) parce que vous étiez trop ivre ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà bu assez pour vomir ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà vomi sur vous ou sur quelqu'un d'autre ? + 1 point</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Avez-vous déjà participé à un barathon ? (Tous les bars d'une ville ou d'une rue) ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Buvez vous régulièrement (au moins trois fois par semaine) ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Avez-vous déjà été ivre pendant plus de 48 heures ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Vous êtes-vous déjà réveillé(e) en vous demandant où vous étiez et qui était la personne à côté de vous ? + 2 points</label></td></tr>
-                <tr><th>Questions sèsque: <input type="number" readonly="readonly" value="0" id="sexe">/14</th></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu des relations sexuelles ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà été impliqué(e) dans une fellation ou un cunnilingus ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu un rapport anal ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà fait un 69 ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des relations sexuelles sans utiliser de moyen de contraception ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu une MST (maladie sexuellement transmissible) ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des relations sexuelles avec plus d'une personne en même temps ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des rapports homosexuels (ou contraires à votre appartenance sexuelle) ? + 2 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu des relations sexuelles avec quelqu'un de votre famille ? + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu un coup d'une nuit ? (Une histoire d'un soir avec relation sexuelle) + 1 points</label></td></tr>
-                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="0">Vous êtes-vous déjà posé des questions sur la vie sexuelle des personnages de dessins animés ? + 0 points</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà fait des concours de secs ? (celui qui bois le plus vite son verre)</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà participé à des jeux à boire ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Etes-vous déjà tombé(e) parce que vous étiez trop ivre ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà bu assez pour vomir ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="1">Avez-vous déjà vomi sur vous ou sur quelqu'un d'autre ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Avez-vous déjà participé à un barathon ? (Tous les bars d'une ville ou d'une rue) ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Buvez vous régulièrement (au moins trois fois par semaine) ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Avez-vous déjà été ivre pendant plus de 48 heures ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="glou" value="2">Vous êtes-vous déjà réveillé(e) en vous demandant où vous étiez et qui était la personne à côté de vous ?</label></td></tr>
+                <tr><th>Questions sèsque: <input type="hidden" readonly="readonly" value="0" id="sexe">/14</th></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu des relations sexuelles ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà été impliqué(e) dans une fellation ou un cunnilingus ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu un rapport anal ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà fait un 69 ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des relations sexuelles sans utiliser de moyen de contraception ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu une MST (maladie sexuellement transmissible) ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des relations sexuelles avec plus d'une personne en même temps ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="2">Avez-vous déjà eu des rapports homosexuels (ou contraires à votre appartenance sexuelle) ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu des relations sexuelles avec quelqu'un de votre famille ?</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="1">Avez-vous déjà eu un coup d'une nuit ? (Une histoire d'un soir avec relation sexuelle)</label></td></tr>
+                <tr><td><label><input type="checkbox" onchange="reclacCriFort()" class="sexe" value="0">Vous êtes-vous déjà posé des questions sur la vie sexuelle des personnages de dessins animés ?</label></td></tr>
             </tbody>
         </table>
         <script>
@@ -129,9 +136,13 @@
                 return getRandomInt(0, 6);
             }
             function gel(id) {
-                return document.getElementById(id);
+                let element = document.getElementById(id);
+                if (!element) {
+                    throw "Unknown id: "+id;
+                }
+                return element;
             }
-            function hide(elem, show) {
+            function show(elem, show) {
                 elem.style.display = show?"block":"none";
             }
 
@@ -151,37 +162,49 @@
             }
             reclacCriFort();
             function generate() {
-                gel("alcOpt").value = Math.ceil(calcScore("glou") / 2 + 5);
-                gel("alcMax").value = Math.ceil((calcScore("glou") / 2 + 5) * 1.5);
+                gel("mpOpti").value = Math.ceil(calcScore("glou") / 2 + 5);
+                gel("mpMax").value = Math.ceil((calcScore("glou") / 2 + 5) * 1.5);
+                gel("mp").value = 0;
                 gel("credib").value = Math.ceil(calcScore("sexe") / 3 + 4 + d7());
+                gel("mpAtt").value = 0;
+                gel("pv").value = 0;
+                bar();
+                show(gel('CriFort'), false);
             }
             function tour() {
-                gel("alcCur").value = parseInt(gel("alcBu").value) + parseInt(gel("alcCur").value) - 1;
-                gel("alcBu").value = 0;
+                let pv = parseInt(gel("pv").value);
+                let mpAtt = parseInt(gel("mpAtt").value);
+                let mp = parseInt(gel("mp").value)
+                pv--;
+                mp--;
+                mp = mp + mpAtt * (pv > 0 ? 1 : 2);
+                gel("pv").value = pv > 0 ? pv : 0;
+                gel("mp").value = mp > 0 ? mp : 0;
+                gel("mpAtt").value = 0;
                 bar();
             }
             function bar() {
                 gel("bar").innerHTML = bar_in();
             }
             function bar_in() {
-                let alcCur = parseInt(gel("alcCur").value);
-                let alcOpt = parseInt(gel("alcOpt").value);
-                let alcMax = parseInt(gel("alcMax").value);
+                let mp = parseInt(gel("mp").value);
+                let mpOpti = parseInt(gel("mpOpti").value);
+                let mpMax = parseInt(gel("mpMax").value);
                 let h = "";
-                for (let i = 1; i <= Math.max(alcCur, alcMax); i++) {
+                for (let i = 1; i <= Math.max(mp, mpMax); i++) {
                     let css = '';
-                    if (i <= alcOpt) {
+                    if (i <= mpOpti) {
                         css = 'b_vert';
-                    } else if (i <= alcMax) {
+                    } else if (i <= mpMax) {
                         css = 'b_orange';
                     } else {
                         css = 'b_rouge';
                     }
                     let c = '&nbsp;';
-                    if (i <= alcCur) {
-                        if (i <= alcOpt) {
+                    if (i <= mp) {
+                        if (i <= mpOpti) {
                             c = '😀';
-                        } else if (i <= alcMax) {
+                        } else if (i <= mpMax) {
                             c = '🥴';
                         } else {
                             c = '🤮';
@@ -189,6 +212,9 @@
                     }
                     h += '<div class="'+css+'">'+c+'</div>';
                     
+                }
+                if (mp > mpMax) {
+                    h += '<span class="rouge">⚠ PLS!<span>';
                 }
                 return h;
             }
