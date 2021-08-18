@@ -59,12 +59,12 @@ Chaque joueur doit passer le test du crie fort. Une fois fini, il doit avoir 2 n
 
 [le test du crie fort](Test_du_crie_fort.md)
 
-Son nombre optimum de MP sera égale à note au crieFort en boisson divisée par 2 plus 5
+Son nombre optimum de MP sera égale à la note au crieFort en glouglou divisée par 2 plus 5
 
     ex: note au crieFort en boisson : 4
     MP optimum = 4 / 2 + 5 = 7
 
-Son nombre max de MP sera eagle à son nombre optimum de MP multiplié par 1,5
+Son nombre max de MP sera égale au nombre optimum de MP multiplié par 1,5
 
     ex:  MP optimum : 8
     MP max = 8 x 1,5 = 12
@@ -316,7 +316,7 @@ Ex:
     2 - 0 - 3 = -3
     ==> la tente va bouger ce soir
 
-Si ça a réussi au tour suivant on passe à obligatoirement l'action choper pour les 2 persos.
+Si ça a réussi au tour suivant on passe à **obligatoirement** l'action choper pour les 2 persos.
 
 ### choper (3 tours)
 
