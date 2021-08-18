@@ -21,3 +21,16 @@ les missions:
 - le SAM : doit finir sa partie avec 0 zéro en boisson. Il peut refuser de boire.
 - choppe sa filière : chopper 4 personnes (pas de pnj) pendant la partie (4 à définir)
 - le gras c'est à vie :
+
+### Un dé7 mais pourkwaaa ?
+
+- je sais plus si je t'ai dit? soluche papier se joue avec un dé7
+- lol! un dé6litre ?
+- oui, mais non. Un dé7 c'est un dé à avec les faces numérotées de 0 à 6. Et si tu as pas de dé7
+- tu utilises un d6 auquel tu rajoute une face?
+- Non, enfin si! Donc si le dé est cassé ou en dehors du plateau ca fait 0
+- Mouais, c'est pas très équiprobable
+- oui mais c'est les règles!
+- remarque sanglante. cinglante*
+
+*Note: discussion réelle qu'il y a eu entre le concepteur du jeu et son frère de fal*

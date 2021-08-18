@@ -8,22 +8,14 @@ Idée: l'effet de l'alcool est retardé et si tu n'as pas mangé avant, c'est bi
 
 La réussite de tes actions dépend des effets de l'alco... heu des MP. Plus tu as bu plus tu réussiras, jusqu’à une limite optimum, après cette limite tes actions auront des comportement plutôt aléatoire. Au delà d'une limite max ca sera la PLS (ca se traduit par ... une PLS le joueur qui passe son tour jusqu'à ce que ses MP soit revenu à un niveau gérable).
 
-### Un dé7 mais pourkwaaa ?
+### La base
 
-- je sais plus si je t'ai dit? soluche papier se joue avec un dé7
-- lol! un dé6litre ?
-- oui, mais non. Un dé7 c'est un dé à avec les faces numérotées de 0 à 6. Et si tu as pas de dé7
-- tu utilises un d6 auquel tu rajoute une face?
-- Non, enfin si! Donc si le dé est cassé ou en dehors du plateau ca fait 0
-- Mouais, c'est pas très équiprobable
-- oui mais c'est les règles!
-- remarque sanglante. cinglante*
+soluche papier se joue avec un dé7:
 
-*Note: discussion réelle qu'il y a eu entre le concepteur du jeu et son frère de fal*
+Un dé7 c'est un dé à avec les faces numérotées de 0 à 6.
+Et si tu as pas de dé7, tu utilises un dé6 et si le dé est cassé ou en dehors du plateau ca fait 0.
 
-### Note sur les arrondis des nombres à virgule
-
-Si les calculs donnent des nombres non entiers, il faut les arrondir de gré ou de force: Arrondi supérieur.
+Si les calculs donnent des nombres non entiers, il faut les arrondir de gré ou de force à l'arrondi supérieur.
 
 ## Le début de partie
 
