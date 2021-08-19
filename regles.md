@@ -47,7 +47,7 @@ Au début de la partie distribuer des 4 cartes items à chaque joueur.
 
 Chaque joueur doit passer le test du crie fort. Une fois fini, il doit avoir 2 notes sur 14 en sesque et en boisson.
 
-[le test du crie fort](Test_du_crie_fort.html)
+[le test du crie fort](test_du_crie_fort.html)
 
 Son nombre optimum de MP sera égale à la note au crieFort en glouglou divisée par 2 plus 5
 
