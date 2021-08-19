@@ -4,7 +4,7 @@ Test du crie fort
 Question glouglou:
 ------------------
 
-1. Avez-vous déjà été ivre ? + 1 points #
+1. Avez-vous déjà été ivre ? + 1 points
 2. Avez-vous déjà fait des concours de secs ? (celui qui bois le plus vite son verre) + 1 points
 3. Avez-vous déjà participé à des jeux à boire ? + 1 points
 4. Etes-vous déjà tombé(e) parce que vous étiez trop ivre ? + 1 points
