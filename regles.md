@@ -15,7 +15,7 @@ Et si tu as pas de dé7, tu utilises un dé6 et si le dé est cassé ou en dehor
 
 Si les calculs donnent des nombres non entiers, il faut les arrondir de gré ou de force à l'arrondi supérieur.
 
-## Le début de partie
+## Préparation
 
 ### le plateau de jeux
 
@@ -27,21 +27,6 @@ Il aura 4 parties:
 - La piste de danse : pour tenter de choper
 - La salle à manger : pour se rassasier
 - La tente : pour être tranquille pour choper ou faire une pls
-
-### Préparation
-
-Choisir le type de partie:
-- apéro 15 tours: avec 1 repas au tour 8)
-- soirée 24 tours: avec 2 repas (tous les 10 tours)
-- congres 42 tours: avec 4 repas (tous les 10 tours)
-
-> Note: suivre les tours faits pour savoir quand placer les repas
-
-(sachant que 1 tours correspondrait à peu près à 1/4 d'heure irl)
-
-Séparer les cartes potager et crabe de la pioche.
-
-Au début de la partie distribuer des 4 cartes items à chaque joueur.
 
 ### Création des persos
 
@@ -78,6 +63,27 @@ Les persos auront aussi 5 variables (valeurs qui changent (beaucoup) tout au lon
 - les PV : en rapport avec le bouffe
 - les points de dignichose (notés @): (celui qui en a le plus gagne) Ils seront notés @ dans le reste règles
 - les bonus de chope
+
+## Le début de partie
+
+Choisir le type de partie:
+- apéro 15 tours: avec 1 repas au tour 8)
+- soirée 24 tours: avec 2 repas (tous les 10 tours)
+- congres 42 tours: avec 4 repas (tous les 10 tours)
+
+> Note: suivre les tours faits pour savoir quand placer les repas
+
+(sachant que 1 tours correspondrait à peu près à 1/4 d'heure irl)
+
+Séparer les cartes potager et crabe de la pioche.
+
+### Welcome Pack
+
+Donner 1 capote et un pin's à chaque joueurs.
+
+Distribuer des 2 cartes items à chaque joueur.
+
+Les perso commencent la partie avec 6PV.
 
 ## Déroulement d'un tour de table
 
