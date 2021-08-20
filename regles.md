@@ -371,8 +371,8 @@ Le dec items contient :
 
 - 8 valeur bouffe
 - 9 valeur boisson
-- 9 objets
-- 12 permanent
+- 13 objets
+- 8 permanent
 - 8 one shot
 - 12 potager (hors de la pioche)
 - 6 vide (pour des idées)
