@@ -2,341 +2,233 @@
 <html lang="fr">
 
 <head>
-    <title>Cartes Soluche papier</title>
+    <title>Soluche - Cartes</title>
     <meta charset="utf-8">
-    <style>
-        .carte {
-            width: 4cm;
-            height: 5cm;
-            border-radius: 0.5cm;
-            border-style: solid;
-            border-width: 2px;
-            border-color: black;
-            display: inline-block;
-            margin: 0.1cm;
-            page-break-inside: avoid;
-            font-size: 14px;
-        }
-        th {
-            border-bottom-style: solid;
-            border-bottom-width: 2px;
-            border-bottom-color: black;
-        }
-        i {
-            font-size: 12px;
-        }
-        body {
-            width: 17.4cm;
-        }
-        </style>
+    <link rel="stylesheet" href="carte.css">
     </head>
     <body id="body">
 
     </body>
+    <script src="Card.js"></script>
     <script>
 
-let cardList = [];
+let Rebloch = new Card(
+    'Rebloch\'',
+    'valeur bouffe',
+    '4 parts<br />+3PV',
+    'Le Reblochon ca fait pousser les nichons'
+);
 
-const rebloch = {
-    title: 'Rebloch\'',
-    line1: 'TYPE: item valeur',
-    line2: '4 parts',
-    line3: '<i>Le Reblochon</i>',
-    line4: '<i>ca fait pousser</i>',
-    line5: '<i>les nichons</i>',
-};
-for (let time = 0; time < 4; time++) {
-    cardList.push(rebloch);
-}
+let Saucisson = new Card(
+    'Saucisson',
+    'valeur bouffe',
+    '4 parts<br />+2PV',
+    'Tu veux voir? J\'ai un saucisson dans ma tente'
+);
 
-const saucisson = {
-    title: 'Saucisson',
-    line1: 'TYPE: item valeur',
-    line2: '4 parts',
-    line3: '<i>Tu viens?</i>',
-    line4: '<i>J\'ai un saucisson</i>',
-    line5: '<i>dans ma tente</i>\'',
-};
-for (let time = 0; time < 4; time++) {
-    cardList.push(saucisson);
-}
+let genepi = new Card(
+    'Gôle de génépi',
+    'valeur boisson',
+    '4 parts<br />+2MP',
+    'La gôle c\'est mon médicament'
+);
 
-const genepi = {
-    title: 'Gôle de génépi',
-    line1: 'TYPE: item valeur',
-    line2: '4 parts',
-    line3: '',
-    line4: '<i>La gôle</i>',
-    line5: '<i>c\'est mon médicament</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(genepi);
-}
+let Chartreuse = new Card(
+    'Chartreuse',
+    'valeur boisson',
+    '6 parts<br />+2MP',
+    'Grenoble! Noble!'
+);
 
-const chartreuse = {
-    title: 'Chartreuse',
-    line1: 'TYPE: item valeur',
-    line2: '6 parts',
-    line3: '',
-    line4: '<i>Grenoble</i>',
-    line5: '<i>Noble!</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(chartreuse);
-}
+let poire = new Card(
+    'Gôle de poire',
+    'valeur boisson',
+    '4 parts<br />+2MP',
+    'Qui boit la gôle<br />Benne la bagôle!'
+);
 
-const poire = {
-    title: 'Gôle de poire',
-    line1: 'TYPE: item valeur',
-    line2: '4 parts',
-    line3: '',
-    line4: '<i>qui boit la gôle</i>',
-    line5: '<i>Benne la bagôle</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(poire);
-}
+let Biere = new Card(
+    'Bières',
+    'valeur boisson',
+    '4 parts<br />+1MP',
+    'Burp!'
+);
 
-const bieres = {
-    title: 'Bières',
-    line1: 'TYPE: item valeur',
-    line2: '3 parts',
-    line3: '<i>Kéken</i>',
-    line4: '<i>Tu ne le sais pas</i>',
-    line5: '<i>Mais tu est déjà sous</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(bieres);
-}
+let Kro = new Card(
+    'Krô',
+    'valeur boisson',
+    '4 parts<br />+0MP<br />+0PV',
+    'KÉKEN!'
+);
 
-const capote = {
-    title: 'Capote',
-    line1: 'TYPE: item',
-    line2: '<i></i>',
-    line3: '<i>Luke,</i>',
-    line4: '<i>je ne serai pas</i>',
-    line5: '<i>ton père</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(capote);
-}
+let Capote = new Card(
+    'Capote',
+    'objet',
+    '',
+    'Luke, je ne serai pas ton père'
+);
 
-const capotePH = {
-    title: 'Capote phospho',
-    line1: 'TYPE: item',
-    line2: '<i></i>',
-    line3: '<i>coucou,</i>',
-    line4: '<i>Tu veux voir</i>',
-    line5: '<i>Mon sabre laser?</i>',
-};
-for (let time = 0; time < 1; time++) {
-    cardList.push(capotePH);
-}
 
-const capoteFem = {
-    title: 'Préservatif féminin',
-    line1: 'TYPE: item',
-    line2: '<i></i>',
-    line3: '<i>tape dans l\'fond,</i>',
-    line4: '<i>je suis pas ta mère</i>',
-    line5: '<i>ta mère</i>',
-};
-for (let time = 0; time < 1; time++) {
-    cardList.push(capoteFem);
-}
+let CapotePhospho = new Card(
+    'Capote phospho',
+    'objet',
+    '',
+    'Coucou, tu veux voir mon sabre laser?'
+);
 
-const paillardier = {
-    title: 'Paillardier',
-    line1: 'TYPE: item',
-    line2: '<i>À chaque chanson</i>',
-    line3: '<i>faut y mettre</i>',
-    line4: '<i>son cannon</i>',
-    line5: '<i>chanson cannon!</i>',
-};
-for (let time = 0; time < 4; time++) {
-    cardList.push(paillardier);
-}
 
-const pins = {
-    title: 'Pin\'s',
-    line1: 'TYPE: item',
-    line2: '<i></i>',
-    line3: '<i></i>',
-    line4: '<i>c\'est bien</i>',
-    line5: '<i>Tu veux un pin\'s?</i>',
-};
-for (let time = 0; time < 8; time++) {
-    cardList.push(pins);
-}
+let PreservatifF = new Card(
+    'Préservatif féminin',
+    'objet',
+    '',
+    'Tape dans l\'fond, je suis pas ta mère ta mère!'
+);
 
-const corne = {
-    title: 'Corne',
-    line1: 'TYPE: item permanant',
-    line2: '+2MP Max',
-    line3: '',
-    line4: '<i>l\'éco cup</i>',
-    line5: '<i>du viking</i>',
-};
-for (let time = 0; time < 1; time++) {
-    cardList.push(corne);
-}
+let Paillardier = new Card(
+    'Paillardier',
+    'objet',
+    '',
+    'À chaque chanson faut y mettre son cannon chanson cannon!'
+);
 
-const ptiFoie = {
-    title: 'pti foie',
-    line1: 'TYPE: item permanant',
-    line2: 'sur qui tu veux',
-    line3: '-2MP opti',
-    line4: '-2MP max',
-    line5: '<i>BOOM!</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(ptiFoie);
-}
+let Pins = new Card(
+    'Pin\'s',
+    'objet',
+    '',
+    'c\'est bien! Tu veux un pin\'s?'
+);
 
-const Anecdote = {
-    title: 'Anecdote de congrès',
-    line1: 'TYPE: item permanant',
-    line2: '-1 Bonus chope',
-    line3: '<i>Tu te rappelles</i>',
-    line4: '<i>au dernier congres</i>',
-    line5: '<i>Tu as vomis sur ...</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(Anecdote);
-}
+let Corne = new Card(
+    'Corne',
+    'permanant',
+    '+2MP Max',
+    'l\'éco cup du viking'
+);
+
+let ptiFoie = new Card(
+    'pti foie',
+    'permanant',
+    'sur qui tu veux<br />-2MP opti<br />-2MP max',
+    'BOOM!'
+);
+
+let Anecdote = new Card(
+    'Anecdote',
+    'permanant',
+    '-1 Bonus chope',
+    'Tu te rappelles au dernier congres? Tu as vomis sur ...'
+);
 
 // one shot
-const secBizuth = {
-    title: 'Sec bizuth',
-    line1: 'TYPE: one shot',
-    line2: 'sur qui tu veux',
-    line3: '+2MP',
-    line4: '<i>Parce que ...</i>',
-    line5: '<i>C\'est gratuit</i>',
+let SecBizuth = new Card(
+    'Sec bizuth',
+    'one shot',
+    'Sur qui tu veux<br />+2MP',
+    'Parce que ... C\'est gratuit'
+);
+
+let charette = new Card(
+    'Charette',
+    'one shot',
+    'Sur qui tu veux<br />+2MP',
+    'T\'avais qu\'a tenirtes verres collés'
+);
+
+let RoisMages = new Card(
+    'Rois Mages',
+    'one shot',
+    '+3@ à tous les perso présent sur la piste de danse',
+    '🎵 Comme les Rois Mages en Galilée 🎶'
+);
+
+let blackout = new Card(
+    'Blackout',
+    'one shot',
+    'Enlève un insigne permanant à toi ou un autre',
+    'Rachette tes souvenirs'
+);
+
+let Crabe = new Card(
+    'Blackout',
+    'potager',
+    '-1 Bonus chope',
+    'MST'
+);
+
+let Carrote = new Card(
+    'Carrote',
+    'potager',
+    '+1 Bonus chope',
+    ''
+);
+
+let Poireau = new Card(
+    'Poireau',
+    'potager',
+    '+1 Bonus chope',
+    ''
+);
+
+let vide = new Card(
+    '______________',
+    '________',
+    '+_MP<br />+_MP opti<br />+_MP max<br />+_PV<br />+_@<br />+_ chope / crédib<br />',
+    '______________'
+);
+
+let cardGroup= {
+    valeur_bouffe: [
+        { card: Rebloch,        number: 4 },
+        { card: Saucisson,      number: 4 },
+    ],
+    valeur_boisson: [
+        { card: Chartreuse,     number: 2 },
+        { card: genepi,         number: 2 },
+        { card: poire,          number: 2 },
+        { card: Biere,          number: 2 },
+        { card: Kro,            number: 1 },
+    ],
+    objets: [
+        { card: Capote,         number: 2 },
+        { card: CapotePhospho,  number: 2 },
+        { card: PreservatifF,   number: 1 },
+        { card: Paillardier,    number: 4 },
+    ],
+    permanant: [
+        { card: Corne,          number: 4 },
+        { card: Pins,           number: 4 },
+        { card: ptiFoie,        number: 2 },
+        { card: Anecdote,       number: 2 },
+    ],
+    one_shot: [
+        { card: SecBizuth,      number: 2 },
+        { card: charette,       number: 2 },
+        { card: RoisMages,      number: 2 },
+        { card: blackout,       number: 2 },
+    ],
+    potager: [
+        { card: Crabe,          number: 6 },
+        { card: Carrote,        number: 3 },
+        { card: Poireau,        number: 3 },
+    ],
+    vide: [
+        { card: vide,           number: 6 },
+    ]
 };
-for (let time = 0; time < 2; time++) {
-    cardList.push(secBizuth);
+let total = 0;
+for (const cardGroupKey in cardGroup) {
+    let cards = cardGroup[cardGroupKey];
+    let sum = 0;
+    for (const card of cards) {
+        for (let i = 0; i < card.number; i++) {
+            card.card.show();
+        }
+        sum += card.number;
+    }
+    console.log(sum, cardGroupKey);
+    total += sum;
 }
+console.log(total, "total");
 
-const charette = {
-    title: 'charette',
-    line1: 'TYPE: one shot',
-    line2: 'sur qui tu veux',
-    line3: '+2MP',
-    line4: '<i>t\'avais qu\'a tenir</i>',
-    line5: '<i>tes verres collés</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(charette);
-}
-
-const roisMages = {
-    title: 'Rois Mages',
-    line1: 'TYPE: one shot',
-    line2: '+3@ à tous les',
-    line3: 'perso présent sur',
-    line4: 'la piste de danse',
-    line5: '<i>🎵 Comme les Rois Mages en Galilée 🎶</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(roisMages);
-}
-
-const blackout = {
-    title: 'blackout',
-    line1: 'TYPE: one shot',
-    line2: 'enlève un',
-    line3: 'insigne permanant',
-    line4: 'à toi ou un autre',
-    line5: '<i>rachette tes souvenirs</i>',
-};
-for (let time = 0; time < 2; time++) {
-    cardList.push(blackout);
-}
-
-// cartes hors pioche
-const crabe = {
-    title: 'Crabe',
-    line1: 'TYPE: item permanant',
-    line2: '-1 Bonus chope',
-    line3: '',
-    line4: 'MST',
-    line5: '',
-};
-for (let time = 0; time < 6; time++) {
-    cardList.push(crabe);
-}
-
-const Carrote = {
-    title: 'Carrote',
-    line1: 'TYPE: item permanant',
-    line2: '+1 Bonus chope',
-    line3: '',
-    line4: '',
-    line5: 'Potager',
-};
-for (let time = 0; time < 3; time++) {
-    cardList.push(Carrote);
-}
-
-const Poireau = {
-    title: 'Poireau',
-    line1: 'TYPE: item permanant',
-    line2: '+1 Bonus chope',
-    line3: '',
-    line4: '',
-    line5: 'Potager',
-};
-for (let time = 0; time < 3; time++) {
-    cardList.push(Poireau);
-}
-
-const vide = {
-    title: '______________',
-    line1: 'TYPE: ________',
-    line2: '+_MP opti/max',
-    line3: '+_PV',
-    line4: '+_@',
-    line5: '+_ chope / crédib',
-};
-for (let time = 0; time < 23; time++) {
-    cardList.push(vide);
-}
-
-
-function buildCard(card) {
-    return '' +
-        '<table class="carte">' +
-        '    <thead>' +
-        '        <tr>' +
-        '           <th>' + card.title + '</th>' +
-        '        </tr>' +
-        '   </thead>' +
-        '   <tbody>' +
-        '       <tr>' +
-        '           <td>' + card.line1 + '</td>' +
-        '       </tr>' +
-        '       <tr>' +
-        '           <td>' + card.line2 + '</td>' +
-        '       </tr>' +
-        '       <tr>' +
-        '           <td>' + card.line3 + '</td>' +
-        '       </tr>' +
-        '       <tr>' +
-        '           <td>' + card.line4 + '</td>' +
-        '       </tr>' +
-        '       <tr>' +
-        '           <td>' + card.line5 + '</td>' +
-        '       </tr>' +
-        '</tbody>' +
-        '</table>';
-}
-
-let html = '';
-for (const card of cardList) {
-    html += buildCard(card)
-}
-
-document.getElementById('body').innerHTML = html;
     </script>
 </html>

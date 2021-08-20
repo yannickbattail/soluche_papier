@@ -1,0 +1,67 @@
+.carte {
+    width: 52mm;
+    height: 75mm;
+    border-radius: 0.5cm;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    display: inline-table;
+    margin: 1mm;
+    page-break-inside: avoid;
+    font-size: 10px;
+}
+
+.title {
+    font-size: 20px;
+    height: 16mm;
+}
+.type {
+    height: 16mm;
+    font-size: 16px;
+    font-weight: bold;
+}
+.info {
+    height: 16mm;
+    font-size: 16px;
+}
+.description {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.type_valeur_bouffe th {
+    background-color: pink;
+}
+.type_valeur_boisson th {
+    background-color: lightcoral;
+}
+.type_objet th {
+    background-color: lightblue;
+}
+
+.type_permanant th {
+    background-color: chartreuse;
+}
+
+.type_one_shot th {
+    background-color: yellow;
+}
+
+.type_potager th {
+    background-color: orange;
+}
+
+.type_pnj th {
+    background-color: lightgray;
+}
+
+th {
+    border-top-right-radius: 0.5cm;
+    border-top-left-radius: 0.5cm;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+}
+body {
+    width: 220mm;
+}
