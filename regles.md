@@ -58,6 +58,7 @@ La crédibilitruc sera la note au crieFort en sesque divisée par 3, plus 4, plu
 
 
 Les persos auront aussi 5 variables (valeurs qui changent (beaucoup) tout au long du jeux)
+
 - les MP : en rapport avec le glouglou
 - les MP en attentes
 - les PV : en rapport avec le bouffe
@@ -67,6 +68,7 @@ Les persos auront aussi 5 variables (valeurs qui changent (beaucoup) tout au lon
 ## Le début de partie
 
 Choisir le type de partie:
+
 - apéro 15 tours: avec 1 repas au tour 8)
 - soirée 24 tours: avec 2 repas (tous les 10 tours)
 - congres 42 tours: avec 4 repas (tous les 10 tours)
@@ -366,9 +368,16 @@ C'est des perso avec leurs caractéristiques.
 ### Détails : le dec item
 
 Le dec items contient :
-- 16 items valeurs
-- 16 items objets
-Un total de 34 cartes (encore un multiple de 7!)
+
+- 8 valeur bouffe
+- 9 valeur boisson
+- 9 objets
+- 12 permanent
+- 8 one shot
+- 12 potager (hors de la pioche)
+- 6 vide (pour des idées)
+
+Un total de 64 cartes
 
 ### Les items one shot
 
